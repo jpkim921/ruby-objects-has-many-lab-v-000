@@ -1,5 +1,5 @@
 class Artist
-  attr_accessor :name, :songs, :song_count
+  attr_accessor :name, :songs
 
  @@song_count = []
 
@@ -19,11 +19,10 @@ class Artist
     song = Song.new(name_of_song)
     songs << song
     song.artist = self
-    @@song_count << song
   end
 
   def song_count
-    @@song_count.length
+
   end
 
 end
